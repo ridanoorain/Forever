@@ -9,13 +9,17 @@ export default defineConfig({
     tailwindcss(),
     react()],
     server: {port: 5173},
-      build: {
-    // Add this build configuration
+     build: {
     rollupOptions: {
-      external: [], // Ensure this is empty to bundle all dependencies
+      external: [],
+    },
+    commonjsOptions: {
+      transformMixedEsModules: true,
+      include: [/react-router-dom/, /node_modules/]
     }
   },
+  
   optimizeDeps: {
-    include: ['react-router-dom'] // Explicitly include react-router-dom
+    include: ['react-router-dom']
   }
 })
