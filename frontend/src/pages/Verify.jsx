@@ -3,7 +3,7 @@ import { useContext } from 'react'
 import { ShopContext } from '../context/ShopContext'
 import { useSearchParams } from 'react-router-dom'
 import { useEffect } from 'react'
-import { backendUrl } from '../../../admin/src/App'
+import { backendUrl } from '../../../admin/src/App.jsx'
 import axios from 'axios'
 import { toast } from 'react-toastify'
 
